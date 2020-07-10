@@ -9,7 +9,7 @@ class Naifei():
         self.spider()
 
     def get_link(self):
-        link_pattern = re.compile(r'(?<=https://pan.baidu.com/s/)\w+')
+        link_pattern = re.compile(r'(?<=https://pan.baidu.com/s/)\S+')
         try:
             link = link_pattern.findall(self.old_link)[0]
         except IndexError:
@@ -31,8 +31,12 @@ class Naifei():
                     try:
                         code = code_pattern.findall(self.old_link)[0]
                     except IndexError:
-                        t.insert('end', '未匹配到提取码\n')
-                        return None
+                        code_pattern = re.compile(r'(?<=提取码)\w+')
+                        try:
+                            code = code_pattern.findall(self.old_link)[0]
+                        except IndexError:
+                            t.insert('end', '未匹配到提取码\n')
+                            return None
         new_link = f'http://pan.naifei.cc/?share={link}%20&pwd={code}'
         return new_link
 
