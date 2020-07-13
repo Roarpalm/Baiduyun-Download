@@ -16,27 +16,23 @@ class Naifei():
             t.insert('end', '未匹配到百度云链接\n')
             return None
         code_pattern = re.compile(r'(?<=提取码:)\w+')
-        try:
-            code = code_pattern.findall(self.old_link)[0]
-        except IndexError:
+        code = code_pattern.findall(self.old_link)
+        if not code:
             code_pattern = re.compile(r'(?<=提取码: )\w+')
-            try:
-                code = code_pattern.findall(self.old_link)[0]
-            except IndexError:
+            code = code_pattern.findall(self.old_link)
+            if not code:
                 code_pattern = re.compile(r'(?<=提取码： )\w+')
-                try:
-                    code = code_pattern.findall(self.old_link)[0]
-                except IndexError:
+                code = code_pattern.findall(self.old_link)
+                if not code:
                     code_pattern = re.compile(r'(?<=提取码：)\w+')
-                    try:
-                        code = code_pattern.findall(self.old_link)[0]
-                    except IndexError:
+                    code = code_pattern.findall(self.old_link)
+                    if not code:
                         code_pattern = re.compile(r'(?<=提取码)\w+')
-                        try:
-                            code = code_pattern.findall(self.old_link)[0]
-                        except IndexError:
+                        code = code_pattern.findall(self.old_link)
+                        if not code:
                             t.insert('end', '未匹配到提取码\n')
                             return None
+        code = code[0]
         new_link = f'http://pan.naifei.cc/?share={link}%20&pwd={code}'
         return new_link
 
