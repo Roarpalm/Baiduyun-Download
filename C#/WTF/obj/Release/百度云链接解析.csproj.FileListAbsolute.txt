@@ -9,3 +9,14 @@ C:\Users\Administrator\Desktop\C#\WTF\WTF\obj\Release\百度云链接解析.cspr
 C:\Users\Administrator\Desktop\C#\WTF\WTF\obj\Release\百度云链接解析.csproj.CopyComplete
 C:\Users\Administrator\Desktop\C#\WTF\WTF\obj\Release\WTF.exe
 C:\Users\Administrator\Desktop\C#\WTF\WTF\obj\Release\WTF.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\WTF.exe.config
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\WTF.exe
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\WTF.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\HtmlAgilityPack.dll
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\bin\Release\HtmlAgilityPack.xml
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\obj\Release\百度云链接解析.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\obj\Release\百度云链接解析.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\obj\Release\百度云链接解析.csproj.CopyComplete
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\obj\Release\WTF.exe
+C:\Users\Administrator\Desktop\py\baiduyun\C#\WTF\obj\Release\WTF.pdb

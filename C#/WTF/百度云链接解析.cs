@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading;
 using HtmlAgilityPack;
+using System.CodeDom;
 //Install-Package HtmlAgilityPack -Version 1.11.24
 
 namespace BaiduyunLink
@@ -16,76 +17,57 @@ namespace BaiduyunLink
             Console.WriteLine("请完整复制粘贴百度云分享链接然后回车\n");
             Console.WriteLine("请确保链接和提取码之间有空格无回车：");
             string text = Convert.ToString(Console.ReadLine());
-            //text = text.Replace("\n", " ");
             string link_reg = @"(?<=https://pan.baidu.com/s/)\S+";
             MatchCollection linkMatch = Regex.Matches(text, link_reg);
             foreach (Match m in linkMatch)
             {
-                if (m != null)
-                {
-                    link = m.Value;
-                }
-                else
-                {
-                    Console.WriteLine("未匹配到链接\n");
-                    goto final;
-                }
+                link = m.Value;
             }
-            string code_reg = @"(?<=提取码: )\w+";
+            string code_reg = @"(?<=码: )\w+";
             MatchCollection codeMatch = Regex.Matches(text, code_reg);
             foreach (Match a in codeMatch)
             {
-                if (a != null)
-                {
-                    code = a.Value;
-                }
+                code = a.Value;
             }
-            code_reg = @"(?<=提取码:)\w+";
+            code_reg = @"(?<=码:)\w+";
             codeMatch = Regex.Matches(text, code_reg);
             foreach (Match b in codeMatch)
             {
-                if (b != null)
-                {
-                    code = b.Value;
-                }
+                code = b.Value;
             }
-            code_reg = @"(?<=提取码： )\w+";
+            code_reg = @"(?<=码： )\w+";
             codeMatch = Regex.Matches(text, code_reg);
             foreach (Match c in codeMatch)
             {
-                if (c != null)
-                {
-                    code = c.Value;
-                }
+                code = c.Value;
             }
-            code_reg = @"(?<=提取码：)\w+";
+            code_reg = @"(?<=码：)\w+";
             codeMatch = Regex.Matches(text, code_reg);
             foreach (Match d in codeMatch)
             {
-                if (d != null)
-                {
-                    code = d.Value;
-                }
+                code = d.Value;
             }
-            code_reg = @"(?<=提取码)\w+";
+            code_reg = @"(?<=码)\w+";
             codeMatch = Regex.Matches(text, code_reg);
             foreach (Match e in codeMatch)
             {
-                if (e != null)
-                {
-                    code = e.Value;
-                }
-                else
-                {
-                    Console.WriteLine("未匹配到提取码");
-                }
+                code = e.Value;
+            }
+            if(link == "")
+            {
+                Console.WriteLine("未匹配到链接\n");
+                goto final;
+            }
+            if(code == "")
+            {
+                Console.WriteLine("未匹配到提取码\n");
+                goto final;
             }
             string url = $"http://pan.naifei.cc/?share={link}%20&pwd={code}";
             Console.WriteLine("\n官网：");
             Console.WriteLine(url + "\n");
 
             Spider(url);
-
             final:
             Console.WriteLine("按任意键退出");
             Console.ReadKey();
@@ -103,9 +85,9 @@ namespace BaiduyunLink
                 node = doc.DocumentNode.SelectSingleNode("/html/body/table/tbody/tr/td[3]/a/@href");
                 href = node.OuterHtml;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine($"Error: {e.Message}");
+                Console.WriteLine($"Error：未找到下载链接\n");
                 return;
             }
             string reg = @"<a[^>]*href=([""'])?(?<href>[^'""]+)\1[^>]*>";
@@ -128,7 +110,7 @@ namespace BaiduyunLink
                 }
                 catch (Exception other)
                 {
-                    Console.WriteLine(other.Message);
+                    Console.WriteLine("Error" + other.Message);
                 }
             }
             for (int i = 2; i < 99; i++)
