@@ -84,6 +84,7 @@ namespace BaiduyunLink
                     }
                 }
             }
+            // test
             string url = $"http://pan.naifei.cc/?share={link}%20&pwd={code}";
             Console.WriteLine("\n官网：");
             Console.WriteLine(url + "\n");
