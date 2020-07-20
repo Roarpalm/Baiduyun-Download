@@ -10,10 +10,10 @@ namespace BaiduyunLink
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            string link = "";
-            string code = "";
+            string link;
+            string code;
             Console.WriteLine("请完整复制粘贴百度云分享链接然后回车\n");
             Console.WriteLine("请确保链接和提取码之间有空格无回车：");
             string text = Convert.ToString(Console.ReadLine());
@@ -68,8 +68,17 @@ namespace BaiduyunLink
                             }
                             else
                             {
-                                Console.WriteLine("未匹配到提取码\n");
-                                goto final;
+                                code_reg = new Regex(@"(?<=码 )\w+");
+                                code_match = code_reg.Match(text);
+                                if (code_match.Success)
+                                {
+                                    code = code_match.Value;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("未匹配到提取码\n");
+                                    goto final;
+                                }
                             }
                         }
                     }
@@ -87,13 +96,13 @@ namespace BaiduyunLink
         // 抓取下载链接并自动用默认浏览器打开
         public static void Spider(string url)
         {
-            string href = null;
-            string name = null;
-            string size = null;
-            HtmlNode node = null;
-            HtmlNode name_node = null;
-            HtmlNode size_node = null;
-            HtmlDocument doc = null;
+            string href;
+            string name;
+            string size;
+            HtmlNode node;
+            HtmlNode name_node;
+            HtmlNode size_node;
+            HtmlDocument doc;
             string reg = @"<a[^>]*href=([""'])?(?<href>[^'""]+)\1[^>]*>";
             HtmlWeb web = new HtmlWeb();
             doc = web.Load(url);
