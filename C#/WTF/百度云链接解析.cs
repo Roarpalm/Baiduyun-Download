@@ -76,8 +76,17 @@ namespace BaiduyunLink
                                 }
                                 else
                                 {
-                                    Console.WriteLine("未匹配到提取码\n");
-                                    goto final;
+                                    code_reg = new Regex(@"(?<= )\w{4}");
+                                    code_match = code_reg.Match(text);
+                                    if (code_match.Success)
+                                    {
+                                        code = code_match.Value;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("未匹配到提取码\n");
+                                        goto final;
+                                    }
                                 }
                             }
                         }
@@ -96,6 +105,7 @@ namespace BaiduyunLink
         // 抓取下载链接并自动用默认浏览器打开
         public static void Spider(string url)
         {
+            Console.WriteLine("开始爬取...\n");
             string href;
             string name;
             string size;
@@ -119,6 +129,7 @@ namespace BaiduyunLink
                     //文件为0直接跳过
                     if (size == "0M")
                     {
+                        Console.WriteLine($"第{i}个文件为0M，自动跳过")；
                         continue;
                     }
                     //文件名
