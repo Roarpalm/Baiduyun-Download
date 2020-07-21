@@ -126,17 +126,17 @@ namespace BaiduyunLink
                     //文件大小
                     size_node = doc.DocumentNode.SelectSingleNode($"/html/body/table/tbody/tr[{i}]/td[2]");
                     size = size_node.InnerText;
-                    //文件为0直接跳过
-                    if (size == "0M")
-                    {
-                        Console.WriteLine($"第{i}个文件为0M，自动跳过")；
-                        continue;
-                    }
                     //文件名
                     name_node = doc.DocumentNode.SelectSingleNode($"/html/body/table/tbody/tr[{i}]/td[1]");
                     name = name_node.InnerText;
-
+                    //文件为0直接跳过
                     Console.WriteLine(name + " 大小：" + size);
+                    if (size == "0M")
+                    {
+                        Console.WriteLine($"第{i}个文件为0M，自动跳过");
+                        continue;
+                    }
+
                 }
                 catch (Exception)
                 {
