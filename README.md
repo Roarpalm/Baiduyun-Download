@@ -34,7 +34,7 @@ http://pan.naifei.cc/?share={链接}%20&pwd={提取码}
 
 - 应用程序在 C#/windows/bin/Release/windows.exe
 
-![界面](C#/img/C# ui.png?raw=true)
+![界面](C#/img/GUI.png?raw=true)
 
 ## 更新日志
 
