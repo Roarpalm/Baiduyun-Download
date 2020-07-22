@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\Windows.exe.config
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\Windows.exe
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\Windows.pdb
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.exe
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.pdb
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Administrator\Desktop\C#\Windows\Windows\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.csproj.CopyComplete
+C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Debug\Windows.Form2.resources

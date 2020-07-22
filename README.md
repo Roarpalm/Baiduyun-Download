@@ -32,9 +32,9 @@ http://pan.naifei.cc/?share={链接}%20&pwd={提取码}
 
 - 功能和Python版相同，但exe体积小很多
 
-- 无GUI，命令行窗口
+- 应用程序在 C#/windows/bin/Release/windows.exe
 
-- 应用程序在 C#/WTF/bin/Release/WTF.exe
+![界面](C#/img/C# ui.png?raw=true)
 
 ## 更新日志
 
@@ -53,3 +53,9 @@ http://pan.naifei.cc/?share={链接}%20&pwd={提取码}
 2020年7月21日
 
 - 更好地匹配提取码
+
+2020年7月22日
+
+- 新增UI界面
+
+- 点击跳转而非自动跳转
