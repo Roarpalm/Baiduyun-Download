@@ -29,7 +29,7 @@ namespace Windows
         public string GetLink()
         {
             string link;
-            string code;
+            string code = "";
             Regex link_reg = new Regex(@"(?<=pan.baidu.com/s/)\S+");
             Match link_match = link_reg.Match(textBox1.Text);
             if (link_match.Success)
@@ -98,7 +98,6 @@ namespace Windows
                                     else
                                     {
                                         MessageBox.Show("未匹配到提取码");
-                                        return "";
                                     }
                                 }
                             }
