@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\C#",
-    "\\C#\\WTF",
-    "\\C#\\WTF\\bin",
-    "\\C#\\WTF\\bin\\Release"
+    "\\C#"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\C#\\Windows.sln",
   "PreviewInSolutionExplorer": false
 }

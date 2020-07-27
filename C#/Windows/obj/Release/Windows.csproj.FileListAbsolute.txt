@@ -12,3 +12,17 @@ C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Release\Windows.csproj.Cor
 C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Release\Windows.csproj.CopyComplete
 C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Release\Windows.exe
 C:\Users\Administrator\Desktop\C#\Windows\Windows\obj\Release\Windows.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\Windows.exe.config
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\Windows.exe
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\Windows.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\HtmlAgilityPack.dll
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\bin\Release\HtmlAgilityPack.xml
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.Form2.resources
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.Properties.Resources.resources
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csproj.CopyComplete
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.exe
+C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.pdb
