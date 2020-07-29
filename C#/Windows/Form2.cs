@@ -13,7 +13,7 @@ namespace Windows
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string url = GetLink();
             if (url != "")
@@ -109,6 +109,10 @@ namespace Windows
             textBox2.Text = "如有任何问题请访问官网：" + Environment.NewLine + url + Environment.NewLine + Environment.NewLine;
             return url;
         }
+        /// <summary>
+        /// 爬取链接并输出到UI上
+        /// </summary>
+        /// <param name="url">通过pan.naifei.cc解析的百度云下载链接</param>
         public void Spider(string url)
         {
             textBox2.Text += "开始爬取..." + Environment.NewLine + Environment.NewLine;
@@ -136,11 +140,9 @@ namespace Windows
                     name_node = doc.DocumentNode.SelectSingleNode($"/html/body/table/tbody/tr[{i}]/td[1]");
                     name = name_node.InnerText;
                     //文件为0直接跳过
-                    //textBox2.Text += $"文件：{name} 大小：{size}" + Environment.NewLine + Environment.NewLine;
                     if (size == "0M")
                     {
                         SetLable($"文件：{name} 大小：{size} 自动跳过", i);
-                        //textBox2.Text += $"第{i}个文件为0M，自动跳过" + Environment.NewLine;
                         continue;
                     }
                     else
@@ -168,18 +170,14 @@ namespace Windows
                     }
 
                     SetlinkLable(href2, i);
-                    try
-                    {
-                        // 使用默认浏览器，自动打开下载链接
-                        //Process.Start(href2);
-                    }
-                    catch (Exception other)
-                    {
-                        MessageBox.Show("Error: " + other.Message);
-                    }
                 }
             }
         }
+        /// <summary>
+        /// 把文件信息对应到UI上的label
+        /// </summary>
+        /// <param name="text">文件信息</param>
+        /// <param name="i">第i个文件</param>
         public void SetLable(string text, int i)
         {
             if (i == 1) label2.Text = text;
@@ -191,6 +189,11 @@ namespace Windows
             if (i == 7) label8.Text = text;
             if (i == 8) label9.Text = text;
         }
+        /// <summary>
+        /// 把链接对应到UI上的LinkLabel
+        /// </summary>
+        /// <param name="link">下载链接</param>
+        /// <param name="i">第i个链接</param>
         public void SetlinkLable(string link, int i)
         {
             if (i == 1) linkLabel1.Text = link;
@@ -202,43 +205,43 @@ namespace Windows
             if (i == 7) linkLabel7.Text = link;
             if (i == 8) linkLabel8.Text = link;
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //点击链接跳转默认浏览器开始下载
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel1.Text);
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel2.Text);
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel3.Text);
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel4.Text);
         }
 
-        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel5.Text);
         }
 
-        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel6.Text);
         }
 
-        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel7.Text);
         }
 
-        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel8.Text);
         }

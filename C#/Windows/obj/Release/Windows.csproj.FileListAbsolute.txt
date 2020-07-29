@@ -26,3 +26,17 @@ C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csproj
 C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.csproj.CopyComplete
 C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.exe
 C:\Users\Administrator\Desktop\py\baiduyun\C#\Windows\obj\Release\Windows.pdb
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\HtmlAgilityPack.dll
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\HtmlAgilityPack.pdb
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\HtmlAgilityPack.xml
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.csprojAssemblyReference.cache
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.Form2.resources
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.Properties.Resources.resources
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.csproj.GenerateResource.cache
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.csproj.CoreCompileInputs.cache
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.exe
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.pdb
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\Windows.exe.config
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\Windows.exe
+E:\C#\Baiduyun_Download\C#\Windows\bin\Release\Windows.pdb
+E:\C#\Baiduyun_Download\C#\Windows\obj\Release\Windows.csproj.CopyComplete
